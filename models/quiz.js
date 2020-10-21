@@ -15,15 +15,11 @@ class Quiz {
 
 module.exports = {
     getQuizzes: async () => {
-        let responseBodyOfFetch;
-
-        try {
-            const responseOfFetch = await fetch(API_URL);
-            responseBodyOfFetch = await responseOfFetch.json();
-        } catch (error) {
+        const responseOfFetch = await fetch(API_URL).catch((error) => {
             throw error;
-        }
+        });
 
+        const responseBodyOfFetch = await responseOfFetch.json();
         const quizzes = responseBodyOfFetch.results;
         const newQuizzes = [];
 
