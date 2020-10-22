@@ -1,0 +1,13 @@
+{
+  "name": "quiznode",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "~4.16.1",
+    "node-fetch": "^2.6.1"
+  }
+}
